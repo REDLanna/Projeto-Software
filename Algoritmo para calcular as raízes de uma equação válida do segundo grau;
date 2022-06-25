@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Equação2ºgrau {
+    public static void main(String[] args) {
+        float x, y, z,     
+              delta,      
+              rdelta,    
+              r1,r2;  
+        Scanner entrada = new Scanner(System.in);
+ 
+        System.out.println("Equação: ax² + bx + cx = 0");
+        System.out.print("Informe um valor para x: ");
+        x = entrada.nextFloat();
+        System.out.print("Informe um valor para y:  ");
+        y = entrada.nextFloat();
+        System.out.print("Informe um valor para z: ");
+        z = entrada.nextFloat();
+        
+        if(x != 0) {
+            delta = (y*y) - (4*x*z);
+            rdelta = (float)Math.sqrt(delta);
+       
+            if(delta >=0){
+                r1 = ((-1)*y + rdelta)/(2*x);
+                r2 = ((-1)*y - rdelta)/(2*x);
+                System.out.printf("raízes: %.2f e %.2f", r1, r2);
+            }
+            else{
+                delta = -delta;
+                rdelta = (float)Math.sqrt(delta);
+                System.out.printf("Raíz 1: %.2f + i.%.2f\n", (-y)/(2*x), (rdelta)/(2*x));
+                System.out.printf("Raíz 2: %.2f - i.%.2f\n", (-y)/(2*x), (rdelta)/(2*x));
+                
+            }
+            
+        }
+        else{
+            System.out.println("Não é uma equação do 2º grau; o coeficiente 'x' é inválido.");
+        }
+    }
+
+}
