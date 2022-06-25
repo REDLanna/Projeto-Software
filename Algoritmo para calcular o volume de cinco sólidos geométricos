@@ -1,0 +1,28 @@
+import java.io.*;
+ 
+class Tetraedro {
+
+    {
+        double volume = (Math.pow(side, 3) / (6 * Math.sqrt(2)));
+        return volume;
+    }
+ 
+    {
+        int side = 3;
+        double vol = vol_tetra(side);
+        vol = (double)Math.round(vol * 100) / 100;
+        System.out.println(vol);
+    }
+}
+
+    {
+        double r = 5.0, area = 0.0, volume = 0.0;
+        area = 4 * 3.14 * (r * r);
+        volume = ((double)4 / 3) * 3.14 * (r * r * r);
+        
+        System.out.println("area da esfera ="
+                           + area);
+        
+        System.out.println("volume da esfera =" + volume);
+    }
+}
